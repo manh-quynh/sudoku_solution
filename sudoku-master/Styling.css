@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  margin: 20px 0px 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding: 19px 5px 14px;
+  border-bottom: 1px solid rgba(0, 63, 123, .1);
+  background: #fff;
+  z-index: 100;
+}
+
+#logo {
+  width: 150px;
+}
+
+a {
+  text-decoration: none !important;
+  font-size: 20px;
+  color: #6e7c8c;
+  height: 42px;
+  padding: 0 13px;
+  border-radius: 5px;
+  line-height: 1.1;
+  transition: .2s;
+}
+
+.header-link>a:hover {
+  background-color: #F1F4F8;
+  padding: 10px;
+}
+
+.tutor {
+  padding: 0px 10px 0px 10px;
+}
+
+.difficulty-menu {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.difficulty-text {
+  margin-left: 18%;
+  margin-right: 10px;
+  font-weight: 600;
+  color: #344861;
+  font-size: 16px;
+  line-height: 25px;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
+.select-wrapper {
+  position: relative;
+  user-select: none;
+  width: 15%;
+}
+
+.select {
+  position: relative;
+  display: flex;
+}
+
+.select__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #94a3b7;
+  height: 60px;
+  font-weight: bold;
+  line-height: 60px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.custom-option {
+  position: relative;
+  display: block;
+  padding: 0 10px 0 22px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #3b3b3b;
+  line-height: 40px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.custom-option:hover {
+  cursor: pointer;
+  background-color: #b2b2b2;
+}
+
+.custom-option.selected {
+  color: #ffffff;
+  background-color: #305c91;
+}
+
+.arrow {
+  position: relative;
+  height: 15px;
+  width: 15px;
+  left: 20px;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.arrow::before {
+  left: -5px;
+  transform: rotate(45deg);
+  background-color: #394a6d;
+}
+
+.arrow::after {
+  left: 5px;
+  transform: rotate(-45deg);
+  background-color: #394a6d;
+}
+
+.open .arrow::before {
+  left: -5px;
+  transform: rotate(-45deg);
+}
+
+.open .arrow::after {
+  left: 5px;
+  transform: rotate(45deg);
+}
+
+table {
+  margin: 1em auto;
+  width: 400px;
+  height: 400px;
+}
+
+td {
+  height: 30px;
+  width: 30px;
+  border: 1px solid;
+  text-align: center;
+}
+
+td:first-child {
+  border-left: solid;
+}
+
+td:nth-child(3n) {
+  border-right: solid;
+}
+
+tr:first-child {
+  border-top: solid;
+}
+
+tr:nth-child(3n) td {
+  border-bottom: solid;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input.middle:focus {
+  outline-width: 0;
+}
+
+input {
+  width: 50px;
+  height: 50px;
+  border: hidden;
+  outline: none;
+  text-align: center;
+
+}
+
+#bottom {
+  margin-top: 10px;
+}
+
+input[type=radio] {
+  border: 0px;
+  width: 100%;
+  height: 2em;
+  margin: 10px;
+  text-align: center;
+}
+
+.radio-inline {
+  text-align: center;
+  color: #fff;
+}
+
+.cell {
+  font-size: larger;
+}
+
+div#difficulties.text-center {
+  padding: 5px;
+}
+
+div#bottom.text-center {
+  margin: 5px;
+  padding: 5px;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 32px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+button#grade.btn.btn-dark {
+  background: #007bff;
+
+}
+
+button#solve.btn.btn-secondary.btn-md {
+  background: #007bff;
+}
+
+div#bottom.text-center {
+  margin: 5px;
+  padding: 5px;
+}
+
+button#grade.btn.btn-dark {
+  background: #007bff;
+
+}
+
+button#solve.btn.btn-secondary.btn-md {
+  background: #007bff;
+}
+
+#bottom {
+  position: absolute;
+  top: 15%;
+  right: 15.5%;
+}
+
+#exitgame{
+  background-color: #007bff;
+}
+
+/* ---------huongdan-------*/
+h1.title-guide{
+  color: black;
+  font: 45px Arial,Helvetica,sans-serif;
+}
+.content-guide{
+  text-align: center;
+}
+div.content-guide div.content p{
+  text-align: justify;
+}
+/* .bodyguide div.content-guide{
+  background-color: #EEEEEE;
+} */
+
+div.content-guide p{
+  background-color: #FFFFFF;
+  text-align: left;
+  margin: 0px 350px;
+  padding: 0px 25px;
+}
+div.content-guide h2,h3{
+  background-color: #FFFFFF;
+  text-align: left;
+  margin: 0px 350px;
+  padding: 0px 25px;
+
+}
+
+/* ---------gioi thieu -------*/
+
+ div.gioithieu{
+  /* background-color: #EEEEEE; */
+  padding: 0px 350px;
+  text-align: center;
+ }
+
+h1.title-introduce{
+  color: black;
+  font: 40px Arial,Helvetica,sans-serif;
+}
+
+h1.content-introduce{
+  padding: 20px;
+}
+div.content-introduce p{
+  background-color: #FFFFFF;
+  text-align: left;
+  margin: 0px 0px;
+  padding: 0px 25px;
+  text-align: justify;
+}
+div.content-introduce img{
+  text-align: center;
+}
+/* a{
+  text-align: left;
+  text-decoration: none;
+  color: black;
+  font: 40px Arial,Helvetica,sans-serif;
+} */

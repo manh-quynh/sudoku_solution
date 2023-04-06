@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&amp;display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/sudoku-master/Styling.css">
+    <link rel="icon" href="/sudoku-master/Picture/sudoku-icon.jpg">
+    <title>Sudoku.com</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-logo">
+                <a href="trangchu.html">
+                    <img src="/sudoku-master/Picture/logo.svg" id="logo">
+                </a>
+            </div>
+            <div class="header-link">
+                <a href="" class="new-game">Chơi mới</a>
+                <a href="Huongdan.html" class="tutor">Hướng dẫn</a>
+                <a href="Gioithieu.html" class="info">Giới thiệu</a>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="difficulty-menu">
+            <div class="difficulty-text">
+                Độ khó:
+            </div>
+            <div class="select-wrapper">
+                <div class="select">
+                    <div class="select__trigger"><span>Dễ</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="custom-options">
+                        <span class="custom-option selected" data-value="easy" id="easy">Dễ</span>
+                        <span class="custom-option" data-value="medium">Trung Bình</span>
+                        <span class="custom-option" data-value="hard">Khó</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center" id="bottom">
+            <button type="button" class="btn btn-primary btn-md" id="generate">Tạo Game Mới </button>
+            <button type="button" class="btn btn-secondary btn-md" id="solve" onclick="solve()" disabled>GiảiGame</button>
+            <button type="button" class="btn btn-dark" id="grade" onclick="grade()">Kiểm Tra</button>
+            <button type="button" class="btn btn-dark" id="exitgame" onclick="close_window();">ThoátGame</button>
+
+        </div>
+        <div class="">
+            <table>
+                <tr>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="00"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="01"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="02"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="03"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="04"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="05"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="06"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="07"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="08"></td>
+
+                </tr>
+                <tr>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="10"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="11"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="12"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="13"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="14"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="15"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="16"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="17"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="18"></td>
+                </tr>
+                <tr>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="20"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="21"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="22"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="23"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="24"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="25"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="26"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="27"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="28"></td>
+                </tr>
+                <tr>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="30"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="31"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="32"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="33"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="34"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="35"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="36"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="37"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="38"></td>
+                </tr>
+                <tr>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="40"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="41"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="42"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="43"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="44"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="45"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="46"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="47"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="48"></td>
+                </tr>
+                <tr>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="50"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="51"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="52"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="53"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="54"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="55"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="56"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="57"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="58"></td>
+                </tr>
+                <tr>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="60"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="61"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="62"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="63"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="64"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="65"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="66"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="67"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="68"></td>
+                </tr>
+                <tr>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="70"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="71"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="72"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="73"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="74"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="75"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="76"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="77"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="78"></td>
+                </tr>
+                <tr>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="80"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="81"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="82"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="83"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="84"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="85"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="86"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="87"></td>
+                    <td><input class="cell" type="number" max="9" min="1" size="1" id="88"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="/sudoku-master/Main.js"></script>
+
+</body>
+
+</html>

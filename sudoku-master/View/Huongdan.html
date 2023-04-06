@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/sudoku-master/Styling.css">
+    <link rel="icon" href="/sudoku-master/Picture/sudoku-icon.jpg">
+    <title>Sudoku</title>
+</head>
+
+<body class="bodyguide">
+    <header>
+        <div class="header">
+            <div class="header-logo">
+                <a href="trangchu.html">
+                    <img src="/sudoku-master/Picture/logo.svg" id="logo">
+                </a>
+            </div>
+            <div class="header-link">
+                <a href="trangchu.html" target="_self" class="new-game">Chơi mới</a>
+                <a href="Huongdan.html" class="tutor">Hướng dẫn</a>
+                <a href="Gioithieu.html" class="info">Giới thiệu</a>
+            </div>
+        </div>
+    </header>
+    <div class="content-guide">
+        <h1 class="title-guide">Luật Chơi Sudoku</h1>
+        <div class="content">
+            <h2>I .Luật chơi Sudoku</h2>
+            <p>Luật chơi vô cùng đơn giản, tất cả những gì bạn cần làm là điền những chữ số từ 1 tới 9 vào những vị trí phù
+                hợp, tuân theo những quy luật đã được định sẵn. Mỗi một ô vuông nhỏ trong lưới sẽ thuộc một hàng, một cột và
+                một khối 3x3 tương ứng. Do vậy, chữ số được điền vào ô trống phải đảm bảo đủ ba điều kiện: là chữ số duy
+                nhất trong hàng, trong cột và trong khối đó. Ví dụ khi bạn điền số 7 vào ô trống, trong hàng dọc sẽ chỉ được
+                có một chữ số 7, tương tự với trong cột và trong khối vuông 3x3.</p>
+            <p>Một lời giải hoàn chỉnh sẽ bao gồm 3 yếu tố:</p>
+            <p>+ Mỗi hàng ngang đều phải có đủ 9 chữ số (từ 1 tới 9), không cần theo đúng thứ tự.</p>
+            <p>+ Mỗi hàng dọc phải có đủ 9 chữ số</p>
+            <p>+ Trong mỗi khối vuông 3x3 (tổng cộng 9 khối) cũng phải có mặt đủ 9 chữ số khác nhau.</p>
+            <img src="/sudoku-master/Picture/gioithieu01.jpg" alt="Trulli" width="650" height="534">
+
+            <h2> II. Mẹo giải Sudoku</h2>
+            <p>Để có thể giải đố một cách hiệu quả nhất, bạn có thể làm theo những mẹo dưới đây.</p>
+            <h3>1. Dựa theo hàng ngang và hàng dọc để loại trừ:</h3>
+            <p>Đây là một trong những mẹo dễ thực hiện nhất, được phát triển dựa trên chính quy luật của trò chơi. Đầu tiên, hãy
+                chia lưới câu đố 9x9 thành 3 phần tương ứng với các khối hình vuông 3x3, theo đó mỗi phần sẽ bao gồm 3 cột (hàng).
+                Xét lần lượt từng chữ số theo thứ tự, ví dụ chữ số 3, nếu 2 trong số 3 hàng (cột) của phần được chọn đã có mặt số 3,
+                chắc chắn số 3 sẽ nằm trong ô trống thuộc cột và hàng còn lại. Từ đó ta sẽ đủ dữ kiện để điền thêm các chữ số tiếp
+                theo.</p>
+            <img src="/sudoku-master/Picture/huongdan01.jpg" alt="Trulli" width="650" height="534">
+
+            <h3>2. Tìm các ô cùng khả năng và ghi chú lại</h3>
+            <p>Đối với từng ô vuông, hãy ghi chú những khả năng có thể điền vào (có thể áp dụng nguyên tắc 1). Sau đó hãy dựa vào
+                những suy luận logic để tìm ra đáp án chính xác. Nên nhớ rằng đây chỉ là những khả năng có thể xảy ra, vì vậy đừng
+                vội viết vào ô trống nhé. Điều đó sẽ khiến cho những ô vuông ở thành một “mớ hỗn độn” và bạn sẽ mất phương hướng khi
+                giải đố đấy.</p>
+            <img src="/sudoku-master/Picture/huongdan01.jpg" alt="Trulli" width="650" height="534">
+            <h3>3. Xác định số bắt buộc phải điền</h3>
+            <p>Sau khi đã áp dụng mẹo 1 và 2, bạn sẽ nhận ra những con số còn sót lại. Đó chính là những con số bắt buộc phải điền
+                khi giải đố</p>
+            <img src="/sudoku-master/Picture/huongdan02.jpg" alt="Trulli" width="650" height="534">
+            <p>Trong trường hợp trên, áp dụng phương án 2, ta dễ dàng nhận ra hai khả năng là 1 và 7 dành cho ô còn trống. Áp dụng
+                phương án 1, ta dễ dàng biết được ô vuông màu xanh không thể là số 7 vì trong hàng đã có một số. Như vậy ô vuông đó
+                chỉ có thể là số 1, và ô vuông ở trên sẽ là số 7.</p>
+            <img src="/sudoku-master/Picture/huongdan03.jpg" alt="Trulli" width="650" height="534">
+            <h3>4. Điền nháp và giải thử từng trường hợp có thể xảy ra</h3>
+            <p>Trong quá trình giải ô số đôi khi sẽ xuất hiện những trường hợp đặc biệt. Những trường hợp này sẽ khiến chúng ta phân
+                vân không biết chọn đáp án nào, kể cả khi đã áp dụng 3 mẹo nhỏ được nêu trên.</p>
+            <img src="/sudoku-master/Picture/huongdan04.jpg" alt="Trulli" width="650" height="534">
+            <p>Trong ví dụ trên, ta có thể thấy rằng ở vị trí của cả hai vòng tròn đều phù hợp để điền đáp án 1 và 2., tuy nhiên ta
+                không thể loại trừ được bất kỳ phương án nào. Vậy nên cách tốt nhất chính là hãy thử giải nháp từng trường hợp để có
+                thể tìm ra được vị trí phù hợp cho mỗi chữ số.
+
+                Tuy nhiên, vẫn sẽ có những trường hợp bạn không thể xác định được đáp án chính xác. Vậy nên nếu như vẫn còn những ô số
+                có thể giải, hãy để hai đáp án phân vân này ở vị trí cuối cùng nhé.</p>
+
+
+
+
+        </div>
+    </div>
+</body>
